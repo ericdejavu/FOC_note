@@ -12,4 +12,8 @@ def is_right(d, q, theta):
     res = transfer.park(cl['alpha'], cl['beta'], theta)
     return abs(d - res['d']) < 0.001 and abs(q - res['q']) < 0.001
 
+for i in range(360):
+    if not is_right(5, 0, i):
+        print ('error')
+
 print (is_right(5, 0, 60))
